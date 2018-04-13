@@ -1,0 +1,28 @@
+{
+  "name": "sniffer",
+  "version": "1.0.0",
+  "description": "Sniffer de porta serial com geração de relatórios",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamadrum/sniffer.git"
+  },
+  "keywords": [
+    "serial",
+    "sniffer",
+    "pdf",
+    "excel",
+    "usb",
+    "node",
+    "raspberry"
+  ],
+  "author": "Ettore Luglio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tamadrum/sniffer/issues"
+  },
+  "homepage": "https://github.com/tamadrum/sniffer#readme"
+}

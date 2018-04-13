@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SerialSniffer</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<script src="js/jquery-3.2.1.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script>
+		$(function(){
+			$('#dataInicial').datepicker();
+			$('#dataFinal').datepicker();
+		});
+	</script>
+</head>
+<body>
+	<div id="body>">
+		<ul>
+			<li><a href='#'>Reset Consulta</a></li>
+			<li><a href='#'>Reset Banco</a></li>
+			<li><a href='#'>Ajuda</a></li>
+		</ul>
+		<hr/>
+		<h1>Lista de Capturas</h1>
+		<form name="formulario" id="formulario" method="POST" action="/">
+			<label for="dataInicial">Data Inicial:</label>
+			<input type="text" name="dataInicial" id="dataInicial" value=""/>
+			<br/>
+			<label for="dataFinal">Data Final:</label>
+			<input type="text" name="dataFinal" id="dataFinal" value=""/>
+			<br/>
+			<label for="formato">Formato:</label>
+			<input type="radio" name="formato" id="formatoPDF" value="PDF"/>PDF
+			<input type="radio" name="formato" id="formatoEXCEL" value="EXCEL" checked=true/>EXCEL
+			<br/>
+			<input type="submit" id="submit" name="Executar"/>
+		</form>
+		<hr/>
+		<table border="1" width="100%">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Data</th>
+					<th>Dado</th>
+					<th>Hash</th>
+				</tr>
+			</thead>
+			<tbody>
+				<%for(var i = 0 ; i < lista.length; i++){%>
+				<tr>
+					<td><%=lista[i].id%></td>
+					<td><%=lista[i].data%></td>
+					<td><%=lista[i].dado%></td>
+					<td><%=lista[i].hash%></td>
+					</tr>
+			<%}%>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+</html>
